@@ -1,39 +1,85 @@
-from django.shortcuts import render, HttpResponse, redirect
-from .models import ContactMessage  # Import the ContactMessage model
+from django.shortcuts import render, redirect
 from django.contrib import messages
+from .models import IceCreamFlavor, Order, Gallery
 
 # Home Page
-def index(request):
+def home(request):
+    # Get featured flavors for the homepage
+    featured_flavors = IceCreamFlavor.objects.filter(featured=True)[:3]
+    
     context = {
-        'variable1': 'Hello World',
-        'variable2': 'Welcome to Django'
+        'featured_flavors': featured_flavors,
+        'page_title': 'Home'
     }
     return render(request, 'index.html', context)
 
 # About Page
 def about(request):
-    return render(request, 'about.html')
+    context = {
+        'page_title': 'About Us'
+    }
+    return render(request, 'about.html', context)
 
 # Services Page
-def services(request):  
-    return render(request, 'services.html')
+def services(request):
+    context = {
+        'page_title': 'Our Services'
+    }
+    return render(request, 'services.html', context)
 
 # Contact Page
 def contact(request):
-    return render(request, 'contact.html')
-
-# Handle Contact Form Submission
-def send_message(request):
     if request.method == "POST":
+        # Process the contact form
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
+        
+        # Create a new contact message
+        from .models import ContactMessage
+        ContactMessage.objects.create(
+            name=name,
+            email=email,
+            message=message
+        )
+        
+        messages.success(request, "Your message has been sent! We'll get back to you soon.")
+        return redirect('contact')
+    
+    context = {
+        'page_title': 'Contact Us'
+    }
+    return render(request, 'contact.html', context)
 
-        # Save the message to the database
-        ContactMessage.objects.create(name=name, email=email, message=message)
-        messages.success(request, "Your message has been sent!")
+# Gallery Page
+def gallery(request):
+    # Get all gallery images
+    gallery_images = Gallery.objects.all()
+    
+    context = {
+        'gallery_images': gallery_images,
+        'page_title': 'Gallery'
+    }
+    return render(request, 'gallery.html', context)
 
-        # Redirect back to the contact page with a success message
-        return redirect('/contact')
+# Menu Page (Combined with Flavors)
+def menu(request):
+    # Get all flavors categorized
+    regular_flavors = IceCreamFlavor.objects.filter(category='regular')
+    premium_flavors = IceCreamFlavor.objects.filter(category='premium')
+    seasonal_flavors = IceCreamFlavor.objects.filter(category='seasonal')
+    
+    context = {
+        'regular_flavors': regular_flavors,
+        'premium_flavors': premium_flavors,
+        'seasonal_flavors': seasonal_flavors,
+        'page_title': 'Our Menu'
+    }
+    return render(request, 'flavors.html', context)
 
-    return HttpResponse("Invalid Request", status=400)
+# Visit Page (Replaces Order Page)
+def visit(request):
+    context = {
+        'page_title': 'Visit Our Store'
+    }
+    return render(request, 'visit.html', context)

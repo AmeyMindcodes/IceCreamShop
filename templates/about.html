@@ -2,96 +2,370 @@
 {% block title %}About Us{% endblock title %}
 
 {% block body %}
-<div class="container mt-5">
-    <h2 class="text-center">About Ice Cream Wonderland</h2>
-    <p class="text-center text-muted">Bringing joy, one scoop at a time! 🍦✨</p>
+<div class="container my-5">
+    <!-- Hero Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-dark text-white rounded-3 border-0 shadow overflow-hidden">
+                <img src="/static/images/about_us.jpg" class="card-img opacity-75" alt="Ice Cream Shop" style="height: 400px; object-fit: cover;">
+                <div class="card-img-overlay d-flex flex-column justify-content-center text-center" style="background-color: rgba(0,0,0,0.5);">
+                    <h1 class="display-3 fw-bold">Our Sweet Journey</h1>
+                    <p class="lead fs-4">Bringing joy, one scoop at a time since 2020! 🍦✨</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Our Story Section -->
-    <div class="row mt-4">
-        <div class="col-md-12 text-center">
-            <h4>Our Story</h4>
-            <p>
-                Ice Cream Wonderland started in the heart of Pune with one simple goal:  
-                to create **the most delicious, handcrafted ice creams** using fresh and natural ingredients.  
-                What began as a small family shop has now become a local favorite!  
-            </p>
-            <p>
-                We believe in **quality over everything**—using farm-fresh milk, real fruit, and rich chocolates  
-                to craft the best scoops for you. Whether it’s a classic vanilla or an adventurous mango chili,  
-                every bite is made with love! 💖
-            </p>
+    <!-- Our Story Section with Timeline -->
+    <div class="row mb-5 align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="display-5 fw-bold mb-4 text-primary">Our Story</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2020</h4>
+                        <p>Ice Cream Wonderland was born in the heart of Pune with one simple goal: to create the most delicious, handcrafted ice creams using fresh and natural ingredients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2021</h4>
+                        <p>Expanded our menu to include authentic Indian flavors like Malai Kulfi and Kesar Pista, which quickly became local favorites.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2022</h4>
+                        <p>Introduced our catering services for events and celebrations, bringing our delicious treats to weddings and corporate events.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Today</h4>
+                        <p>We continue to innovate and create new flavors while maintaining our commitment to quality and customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+                <img src="/static/images/ice_cream_making.jpg" class="img-fluid" alt="Ice Cream Making">
+                <div class="card-body bg-light">
+                    <h4 class="card-title fw-bold">Our Philosophy</h4>
+                    <p class="card-text">We believe in <strong>quality over everything</strong>—using farm-fresh milk, real fruit, and rich chocolates to craft the best scoops for you. Every flavor is a labor of love, created to bring smiles to our customers' faces.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Why Choose Us? -->
-    <div class="text-center mt-5">
-        <h3>Why Choose Us?</h3>
-        <p class="text-muted">Here’s why people love Ice Cream Wonderland:</p>
-    </div>
-    <div class="row mt-4 text-center">
-        <div class="col-md-4">
-            <h5 class="mt-2">Fresh Ingredients</h5>
-            <p>We source only the finest ingredients for the creamiest, most flavorful ice cream.</p>
+    <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+            <h2 class="display-5 fw-bold text-success">Why Choose Us?</h2>
+            <p class="lead">Here's why people love Ice Cream Wonderland</p>
         </div>
-        <div class="col-md-4">
-            <h5 class="mt-2">Unique Flavors</h5>
-            <p>From classic vanilla to exotic mango chili, we have flavors for everyone!</p>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-primary text-white mb-3">
+                        <i class="fas fa-leaf fa-2x"></i>
+                    </div>
+                    <h3 class="h4 fw-bold">Fresh Ingredients</h3>
+                    <p>We source only the finest ingredients for the creamiest, most flavorful ice cream. No artificial flavors or preservatives - just pure, natural goodness.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h5 class="mt-2">Happy Customers</h5>
-            <p>We’ve served thousands of happy customers who keep coming back for more.</p>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-danger text-white mb-3">
+                        <i class="fas fa-flask fa-2x"></i>
+                    </div>
+                    <h3 class="h4 fw-bold">Unique Flavors</h3>
+                    <p>From classic vanilla to exotic Paan Delight, we have flavors for everyone! Our master chefs are constantly experimenting with new and exciting combinations.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+                <div class="card-body text-center p-4">
+                    <div class="icon-circle bg-success text-white mb-3">
+                        <i class="fas fa-smile-beam fa-2x"></i>
+                    </div>
+                    <h3 class="h4 fw-bold">Happy Customers</h3>
+                    <p>We've served thousands of happy customers who keep coming back for more. Our commitment to quality and service has earned us a loyal following.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Customer Testimonials -->
-    <div class="text-center mt-5">
-        <h3>What Our Customers Say</h3>
-    </div>
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <div class="card p-3 shadow-sm">
-                <p>“The best ice cream in Pune! Their chocolate fudge is to die for.”</p>
-                <h6 class="text-muted">- Anjali Sharma</h6>
+    <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+            <h2 class="display-5 fw-bold text-warning">What Our Customers Say</h2>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow testimonial-card">
+                <div class="card-body p-4">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left fa-2x text-warning opacity-25"></i></div>
+                    <p class="testimonial-text">The best ice cream in Pune! Their chocolate fudge is to die for. I've tried many ice cream shops, but none compare to the quality and taste of Ice Cream Wonderland.</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="testimonial-avatar bg-primary text-white">AS</div>
+                        <div class="ms-3">
+                            <h5 class="mb-0 fw-bold">Anjali Sharma</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card p-3 shadow-sm">
-                <p>“Amazing flavors and super friendly staff. A must-visit!”</p>
-                <h6 class="text-muted">- Rajesh Patil</h6>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow testimonial-card">
+                <div class="card-body p-4">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left fa-2x text-warning opacity-25"></i></div>
+                    <p class="testimonial-text">Amazing flavors and super friendly staff. A must-visit! The Kesar Pista flavor transported me back to my childhood. Will definitely be coming back again and again.</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="testimonial-avatar bg-success text-white">RP</div>
+                        <div class="ms-3">
+                            <h5 class="mb-0 fw-bold">Rajesh Patil</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card p-3 shadow-sm">
-                <p>“Loved the natural taste! No artificial flavors, just pure bliss.”</p>
-                <h6 class="text-muted">- Priya Menon</h6>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow testimonial-card">
+                <div class="card-body p-4">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left fa-2x text-warning opacity-25"></i></div>
+                    <p class="testimonial-text">Loved the natural taste! No artificial flavors, just pure bliss. The Alphonso Mango flavor is simply outstanding - tastes like fresh mangoes in every bite!</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="testimonial-avatar bg-danger text-white">PM</div>
+                        <div class="ms-3">
+                            <h5 class="mb-0 fw-bold">Priya Menon</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Meet Our Team -->
-    <div class="text-center mt-5">
-        <h3>Meet Our Team</h3>
-    </div>
-    <div class="row mt-4 text-center">
-        <div class="col-md-4">
-            <h5 class="mt-2">Amey Golait</h5>
-            <p>Founder & Chief Ice Cream Taster</p>
+    <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+            <h2 class="display-5 fw-bold text-info">Meet Our Team</h2>
+            <p class="lead">The passionate people behind your favorite ice cream</p>
         </div>
-        <div class="col-md-4">
-            <h5 class="mt-2">Kalpana Sonkar</h5>
-            <p>Master Chef & Flavor Creator</p>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow team-card">
+                <div class="team-image-container">
+                    <div class="team-image bg-primary"></div>
+                </div>
+                <div class="card-body text-center">
+                    <h3 class="h4 fw-bold">Amey Golait</h3>
+                    <p class="text-muted mb-3">Founder & Chief Ice Cream Taster</p>
+                    <p>Passionate about creating the perfect ice cream experience for every customer.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-info"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h5 class="mt-2">Komal Dahe & Sakshi Golait</h5>
-            <p>Marketing & Customer Happiness</p>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow team-card">
+                <div class="team-image-container">
+                    <div class="team-image bg-success"></div>
+                </div>
+                <div class="card-body text-center">
+                    <h3 class="h4 fw-bold">Jyoti Golait</h3>
+                    <p class="text-muted mb-3">Master Chef & Flavor Creator</p>
+                    <p>The creative genius behind our unique and delicious flavor combinations.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-info"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card border-0 shadow team-card">
+                <div class="team-image-container">
+                    <div class="team-image bg-warning"></div>
+                </div>
+                <div class="card-body text-center">
+                    <h3 class="h4 fw-bold">Sakshi Golait</h3>
+                    <p class="text-muted mb-3">Marketing & Customer Happiness</p>
+                    <p>Dedicated to ensuring every customer leaves with a smile on their face.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-info"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Call to Action -->
-    <div class="text-center my-5">
-        <h3>Visit Us & Taste the Magic! 🍦</h3>
-        <p>Come over to our store and treat yourself to the best ice cream in town!</p>
-        <a href="/contact" class="btn btn-primary">Find Us</a>
+    <!-- Visit Us CTA -->
+    <div class="card bg-gradient-primary text-white shadow border-0 rounded-3 overflow-hidden">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <img src="/static/images/shop_interior.jpg" class="img-fluid h-100" alt="Our Shop" style="object-fit: cover;">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="card-body p-5 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Visit Us & Taste the Magic! 🍦</h2>
+                    <p class="lead mb-4">Come over to our store and treat yourself to the best ice cream in town!</p>
+                    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Find Our Location</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<style>
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.testimonial-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.testimonial-quote {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.2;
+}
+.testimonial-text {
+    position: relative;
+    z-index: 1;
+}
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.team-card {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+}
+.team-image-container {
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+.team-image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+.team-image::after {
+    content: "\f007";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+}
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #dee2e6;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+.timeline-dot {
+    position: absolute;
+    left: -39px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #007bff;
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #007bff;
+}
+.timeline-content {
+    padding-bottom: 20px;
+}
+</style>
 {% endblock body %}

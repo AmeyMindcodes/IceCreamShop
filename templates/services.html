@@ -2,31 +2,152 @@
 {% block title %}Our Services{% endblock title %}
 
 {% block body %}
-<div class="container mt-5">
-    <h2 class="text-center">Our Services</h2>
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Our Premium Services</h1>
+        <p class="lead">Experience ice cream like never before with our exceptional services</p>
+    </div>
 
-    <!-- Ice Cream Section -->
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <h4>Ice Cream</h4>
-            <p>Our ice creams are made from the finest ingredients, ensuring a creamy and delightful experience with every scoop!</p>
+    <!-- Hero Banner -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-dark text-white rounded-3 border-0 shadow overflow-hidden">
+                <img src="/static/images/shop_interior.jpg" class="card-img opacity-75" alt="Ice Cream Shop" style="height: 350px; object-fit: cover;">
+                <div class="card-img-overlay d-flex flex-column justify-content-center text-center" style="background-color: rgba(0,0,0,0.4);">
+                    <h2 class="card-title display-5 fw-bold">Crafting Happiness Since 2020</h2>
+                    <p class="card-text lead">We don't just serve ice cream, we create memorable experiences</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Softy Section -->
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <h4>Softy</h4>
-            <p>Our softy treats are smooth, soft, and irresistibly delicious, perfect for a quick dessert or a special occasion.</p>
+    <!-- Services Grid -->
+    <div class="row g-4">
+        <!-- Ice Cream Service -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 hover-card">
+                <img src="/static/images/classic-vanilla.jpg" class="card-img-top" alt="Premium Ice Cream" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <div class="icon-wrapper mb-3">
+                        <i class="fas fa-ice-cream fa-3x text-primary"></i>
+                    </div>
+                    <h3 class="card-title fw-bold">Premium Ice Cream</h3>
+                    <p class="card-text">Our signature ice creams are made from the finest ingredients, ensuring a creamy and delightful experience with every scoop. Each flavor is crafted with passion and precision.</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> 18+ unique flavors</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Made fresh daily</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Natural ingredients</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catering Service -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 hover-card">
+                <img src="/static/images/gallery3.jpg" class="card-img-top" alt="Catering Service" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <div class="icon-wrapper mb-3">
+                        <i class="fas fa-utensils fa-3x text-danger"></i>
+                    </div>
+                    <h3 class="card-title fw-bold">Event Catering</h3>
+                    <p class="card-text">Make your special events even more memorable with our ice cream catering service. Perfect for birthdays, weddings, corporate events, and more!</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Custom ice cream bars</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Professional service staff</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Customizable packages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Family Packs -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0 hover-card">
+                <img src="/static/images/gallery5.jpg" class="card-img-top" alt="Family Packs" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <div class="icon-wrapper mb-3">
+                        <i class="fas fa-users fa-3x text-success"></i>
+                    </div>
+                    <h3 class="card-title fw-bold">Family Packs</h3>
+                    <p class="card-text">Our family packs come in various sizes, designed to bring joy to your family gatherings with a variety of flavors all in one convenient package.</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Multiple flavors in one pack</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Special family discounts</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i> Perfect for home celebrations</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Family Pack Section -->
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <h4>Family Pack</h4>
-            <p>Our family packs come in various sizes, designed to bring joy to your family gatherings with a variety of flavors.</p>
+    <!-- Additional Services -->
+    <div class="row mt-5 g-4">
+        <!-- Ice Cream Workshops -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <i class="fas fa-chalkboard-teacher fa-4x text-info"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="card-title fw-bold">Ice Cream Workshops</h3>
+                            <p class="card-text">Learn the art of ice cream making with our fun and interactive workshops. Great for kids and adults alike!</p>
+                            <p><span class="badge bg-info">New Service!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Flavors -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0 hover-card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            <i class="fas fa-magic fa-4x text-warning"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="card-title fw-bold">Custom Flavor Creation</h3>
+                            <p class="card-text">Have a flavor idea? We can bring it to life! Work with our flavor experts to create your dream ice cream.</p>
+                            <p><span class="badge bg-warning text-dark">Premium Service</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visit Us CTA -->
+    <div class="card mt-5 bg-primary text-white shadow">
+        <div class="card-body p-5 text-center">
+            <h2 class="fw-bold mb-3">Visit Our Store Today!</h2>
+            <p class="lead mb-4">Experience our premium services in person and indulge in the best ice cream in town.</p>
+            <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Find Our Location</a>
         </div>
     </div>
 </div>
+
+<style>
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+.icon-wrapper {
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+</style>
 {% endblock body %}

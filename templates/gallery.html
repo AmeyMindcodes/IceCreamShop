@@ -1,0 +1,103 @@
+{% extends "base.html" %}  
+{% block title %}{{ page_title }}{% endblock title %}  
+
+{% block body %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Our Ice Cream Gallery</h1>
+        <p class="lead">Explore the delicious world of our handcrafted ice creams</p>
+    </div>
+    
+    <div class="row g-4">
+        {% if gallery_images %}
+            {% for image in gallery_images %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    {% if image.image %}
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="{{ image.title }}" style="height: 250px; object-fit: cover;">
+                    {% else %}
+                    <img src="/static/images/gallery{{ forloop.counter }}.jpg" class="card-img-top" alt="{{ image.title }}" style="height: 250px; object-fit: cover;">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ image.title }}</h4>
+                        <p class="card-text">{{ image.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <!-- Default gallery images if no images in database -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    <img src="/static/images/gallery1.jpg" class="card-img-top" alt="Our Shop" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Our Shop</h4>
+                        <p class="card-text">Our beautiful ice cream parlor where the magic happens! Visit us to experience the cozy atmosphere and delicious treats.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    <img src="/static/images/gallery2.jpg" class="card-img-top" alt="Ice Cream Making" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Crafting Process</h4>
+                        <p class="card-text">See how we craft our delicious ice creams with love and care. Each batch is made with the finest ingredients for the perfect taste.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    <img src="/static/images/gallery3.jpg" class="card-img-top" alt="Happy Customers" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Happy Customers</h4>
+                        <p class="card-text">Our customers enjoying their favorite ice cream flavors. The smiles on their faces tell the whole story!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    <img src="/static/images/gallery4.jpg" class="card-img-top" alt="Special Events" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Special Events</h4>
+                        <p class="card-text">We cater to special events and make them even more special! From birthdays to weddings, we've got you covered.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    <img src="/static/images/gallery5.jpg" class="card-img-top" alt="Ice Cream Varieties" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Variety of Flavors</h4>
+                        <p class="card-text">Explore our wide range of flavors that will tantalize your taste buds. From classics to exotic creations, we have it all!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow hover-card">
+                    <img src="/static/images/gallery6.jpg" class="card-img-top" alt="Ice Cream Toppings" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h4 class="card-title">Delicious Toppings</h4>
+                        <p class="card-text">Add your favorite toppings to make your ice cream experience even better! We offer a variety of options to customize your treat.</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    
+    <div class="text-center mt-5">
+        <h2 class="fw-bold">Visit Our Shop Today!</h2>
+        <p class="lead">Come experience the magic of our handcrafted ice creams in person</p>
+        <a href="{% url 'visit' %}" class="btn btn-primary btn-lg mt-3">Find Us</a>
+    </div>
+</div>
+
+<style>
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+</style>
+{% endblock body %} 

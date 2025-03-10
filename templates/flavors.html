@@ -1,0 +1,129 @@
+{% extends "base.html" %}  
+{% block title %}{{ page_title }}{% endblock title %}  
+
+{% block body %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Explore Our Ice Cream Flavors</h1>
+        <p class="lead">Discover a world of delicious flavors crafted with love</p>
+    </div>
+    
+    <!-- Regular Flavors -->
+    <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-primary">Regular Flavors</h2>
+            <span class="badge bg-primary p-2">Starting at ₹99</span>
+        </div>
+        {% if regular_flavors %}
+        <div class="row g-4">
+            {% for flavor in regular_flavors %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    {% if flavor.image %}
+                    <img src="{{ flavor.image.url }}" class="card-img-top" alt="{{ flavor.name }}" style="height: 250px; object-fit: cover;">
+                    {% else %}
+                    <img src="/static/images/{{ flavor.name|lower|slugify }}.jpg" class="card-img-top" alt="{{ flavor.name }}" style="height: 250px; object-fit: cover;" onerror="this.src='/static/images/default_icecream.jpg'">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ flavor.name }}</h4>
+                        <p class="card-text">{{ flavor.description }}</p>
+                        <p class="card-text"><strong class="fs-5 text-primary">₹{{ flavor.price }}</strong></p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{% url 'visit' %}" class="btn btn-primary">Visit Us</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info mb-5">
+            <p>No regular flavors available at the moment.</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    <!-- Premium Flavors -->
+    <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-success">Premium Flavors</h2>
+            <span class="badge bg-success p-2">Starting at ₹139</span>
+        </div>
+        {% if premium_flavors %}
+        <div class="row g-4">
+            {% for flavor in premium_flavors %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    {% if flavor.image %}
+                    <img src="{{ flavor.image.url }}" class="card-img-top" alt="{{ flavor.name }}" style="height: 250px; object-fit: cover;">
+                    {% else %}
+                    <img src="/static/images/{{ flavor.name|lower|slugify }}.jpg" class="card-img-top" alt="{{ flavor.name }}" style="height: 250px; object-fit: cover;" onerror="this.src='/static/images/default_icecream.jpg'">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ flavor.name }}</h4>
+                        <p class="card-text">{{ flavor.description }}</p>
+                        <p class="card-text"><strong class="fs-5 text-success">₹{{ flavor.price }}</strong></p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{% url 'visit' %}" class="btn btn-success">Visit Us</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info mb-5">
+            <p>No premium flavors available at the moment.</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    <!-- Seasonal Flavors -->
+    <div class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold text-warning">Seasonal Flavors</h2>
+            <span class="badge bg-warning text-dark p-2">Limited Time Only!</span>
+        </div>
+        {% if seasonal_flavors %}
+        <div class="row g-4">
+            {% for flavor in seasonal_flavors %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    {% if flavor.image %}
+                    <img src="{{ flavor.image.url }}" class="card-img-top" alt="{{ flavor.name }}" style="height: 250px; object-fit: cover;">
+                    {% else %}
+                    <img src="/static/images/{{ flavor.name|lower|slugify }}.jpg" class="card-img-top" alt="{{ flavor.name }}" style="height: 250px; object-fit: cover;" onerror="this.src='/static/images/default_icecream.jpg'">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ flavor.name }}</h4>
+                        <p class="card-text">{{ flavor.description }}</p>
+                        <p class="card-text"><strong class="fs-5 text-warning">₹{{ flavor.price }}</strong></p>
+                        <p class="card-text"><small class="text-muted">Limited Time Only!</small></p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{% url 'visit' %}" class="btn btn-warning">Visit Us</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <p>No seasonal flavors available at the moment.</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="bg-light p-4 rounded-3 mt-5 shadow-sm">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h2 class="fw-bold">Create Your Own Flavor!</h2>
+                <p class="lead mb-0">Have a unique flavor idea? Let us know and we might add it to our menu!</p>
+            </div>
+            <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+                <a href="{% url 'contact' %}" class="btn btn-lg btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %} 

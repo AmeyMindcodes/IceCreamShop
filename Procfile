@@ -1,0 +1,1 @@
+web: gunicorn IceCreamShop.wsgi --log-file - 

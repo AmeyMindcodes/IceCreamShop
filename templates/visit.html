@@ -1,0 +1,293 @@
+{% extends "base.html" %}  
+{% block title %}Visit Our Store{% endblock title %}  
+
+{% block body %}
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Visit Our Ice Cream Wonderland</h1>
+        <p class="lead">Experience the magic in person and indulge in our delicious treats!</p>
+    </div>
+    
+    <!-- Hero Banner -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-dark text-white rounded-3 border-0 shadow overflow-hidden">
+                <img src="/static/images/shop_interior.jpg" class="card-img opacity-75" alt="Ice Cream Shop" style="height: 400px; object-fit: cover;">
+                <div class="card-img-overlay d-flex flex-column justify-content-center text-center" style="background-color: rgba(0,0,0,0.4);">
+                    <h2 class="card-title display-5 fw-bold">The Ultimate Ice Cream Experience</h2>
+                    <p class="card-text lead">Nothing beats the joy of enjoying freshly scooped ice cream in our cozy shop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Left Column: Visit Information -->
+        <div class="col-lg-7 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-header bg-primary text-white py-3">
+                    <h3 class="mb-0 fw-bold">Why Visit Our Store?</h3>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-ice-cream fa-2x text-primary me-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Freshly Scooped</h4>
+                                    <p>Experience the perfect texture and temperature of freshly scooped ice cream, something delivery can't match!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-utensils fa-2x text-primary me-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Toppings Bar</h4>
+                                    <p>Customize your ice cream with our extensive toppings bar featuring nuts, sauces, sprinkles, and more!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-smile-beam fa-2x text-primary me-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Friendly Staff</h4>
+                                    <p>Our passionate team is ready to recommend flavors and create the perfect ice cream experience for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-thumbs-up fa-2x text-primary me-3"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold">Free Samples</h4>
+                                    <p>Can't decide? Try free samples of our flavors before making your choice!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <h4 class="fw-bold mb-3">Store Hours</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Monday - Friday</td>
+                                    <td>11:00 AM - 10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Saturday - Sunday</td>
+                                    <td>10:00 AM - 11:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Holidays</td>
+                                    <td>10:00 AM - 11:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <h4 class="fw-bold mb-3">Our Location</h4>
+                    <p><i class="fas fa-map-marker-alt text-danger me-2"></i> Ice Cream Wonderland, Mothi Umri Rd, infront of Gurukrupa superbazzar, Jatharpeth, Akola, Maharashtra 444001</p>
+                    <p><i class="fas fa-phone text-success me-2"></i> +91 74208 49068</p>
+                    <p><i class="fas fa-envelope text-primary me-2"></i> ameygolait123@gmail.com</p>
+                    
+                    <div class="mt-4">
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column: Special Offers -->
+        <div class="col-lg-5">
+            <!-- Special In-Store Offers -->
+            <div class="card shadow mb-4">
+                <div class="card-header bg-danger text-white py-3">
+                    <h3 class="mb-0 fw-bold">Exclusive In-Store Offers</h3>
+                </div>
+                <div class="card-body p-4">
+                    <div class="offer-item mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="offer-badge me-2">NEW</div>
+                            <h4 class="fw-bold mb-0">Happy Hour Special</h4>
+                        </div>
+                        <p>Visit between 3-5 PM on weekdays and get 20% off on all regular flavors!</p>
+                    </div>
+                    
+                    <div class="offer-item mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="offer-badge me-2">HOT</div>
+                            <h4 class="fw-bold mb-0">Buy 2 Get 1 Free</h4>
+                        </div>
+                        <p>Purchase any two premium scoops and get one regular scoop absolutely free!</p>
+                    </div>
+                    
+                    <div class="offer-item mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="offer-badge me-2">SAVE</div>
+                            <h4 class="fw-bold mb-0">Family Pack Discount</h4>
+                        </div>
+                        <p>Get 15% off when you purchase our family pack with 4 or more flavors!</p>
+                    </div>
+                    
+                    <div class="offer-item">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="offer-badge me-2">GIFT</div>
+                            <h4 class="fw-bold mb-0">Birthday Special</h4>
+                        </div>
+                        <p>Show your ID on your birthday and get a free scoop of your favorite flavor!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Website Visitor Coupon -->
+            <div class="card shadow border-0 bg-success text-white">
+                <div class="card-body p-4 text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-gift fa-3x"></i>
+                    </div>
+                    <h3 class="fw-bold">Website Visitor Special</h3>
+                    <p class="lead">Show this screen at our store and get 10% off your purchase!</p>
+                    <div class="coupon-code mt-3 mb-3">
+                        <span class="fw-bold">WEBVISITOR10</span>
+                    </div>
+                    <p class="small mb-0">Valid until December 31, 2023. Cannot be combined with other offers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Customer Testimonials -->
+    <div class="row mt-5">
+        <div class="col-12 text-center mb-4">
+            <h2 class="fw-bold">What Our Visitors Say</h2>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm testimonial-card">
+                <div class="card-body p-4">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left fa-2x text-warning opacity-25"></i></div>
+                    <p class="testimonial-text">Visiting the store was such a delight! The ambiance is perfect and the staff helped me pick the perfect flavor combination.</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="testimonial-avatar bg-primary text-white">RK</div>
+                        <div class="ms-3">
+                            <h5 class="mb-0 fw-bold">Rahul Kumar</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm testimonial-card">
+                <div class="card-body p-4">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left fa-2x text-warning opacity-25"></i></div>
+                    <p class="testimonial-text">The toppings bar is amazing! I created a custom sundae that was absolutely divine. Will definitely be back soon!</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="testimonial-avatar bg-success text-white">SM</div>
+                        <div class="ms-3">
+                            <h5 class="mb-0 fw-bold">Sneha Mehta</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm testimonial-card">
+                <div class="card-body p-4">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left fa-2x text-warning opacity-25"></i></div>
+                    <p class="testimonial-text">My kids love coming here! The happy hour special is perfect for after-school treats. The staff is so patient with the little ones.</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="testimonial-avatar bg-danger text-white">AD</div>
+                        <div class="ms-3">
+                            <h5 class="mb-0 fw-bold">Anita Desai</h5>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.testimonial-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+.testimonial-quote {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.2;
+}
+.testimonial-text {
+    position: relative;
+    z-index: 1;
+}
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.offer-badge {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+.coupon-code {
+    background-color: white;
+    color: #198754;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+</style>
+{% endblock body %} 
