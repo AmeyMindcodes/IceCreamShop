@@ -3,7 +3,7 @@ services:
     name: icecream-wonderland
     env: python
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
-    startCommand: gunicorn IceCreamShop.wsgi:application
+    startCommand: python manage.py runserver
     envVars:
       - key: SECRET_KEY
         generateValue: true
