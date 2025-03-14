@@ -1,20 +1,18 @@
 services:
   - type: web
-    name: icecream-wonderland
+    name: icecreamshop
     env: python
-    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
-    startCommand: python manage.py runserver
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn IceCreamShop.wsgi:application
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
         value: false
-      - key: PYTHON_VERSION
-        value: 3.11.0
-      - key: DATABASE_URL
-        fromDatabase:
-          name: icecream-db
-          property: connectionString
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
 
 databases:
   - name: icecream-db
