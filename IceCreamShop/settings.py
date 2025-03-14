@@ -32,7 +32,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-$lm2)sx5a92#98jnx#4&u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.onrender.com',
+    'icecream-wonderland.onrender.com',  # Updated domain name
+]
 
 
 # Application definition
