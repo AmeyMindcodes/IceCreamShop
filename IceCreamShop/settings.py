@@ -82,7 +82,6 @@ WSGI_APPLICATION = 'IceCreamShop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# Default to SQLite for local development and PythonAnywhere free tier
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -90,13 +89,13 @@ DATABASES = {
     }
 }
 
-# Use PostgreSQL if DATABASE_URL is provided
-DATABASE_URL = os.environ.get('DATABASE_URL')
-if DATABASE_URL:
-    DATABASES['default'] = dj_database_url.config(
-        default=DATABASE_URL,
-        conn_max_age=600,
-    )
+# Comment out the DATABASE_URL configuration for now
+# DATABASE_URL = os.environ.get('DATABASE_URL')
+# if DATABASE_URL:
+#     DATABASES['default'] = dj_database_url.config(
+#         default=DATABASE_URL,
+#         conn_max_age=600,
+#     )
 
 
 # Password validation
