@@ -50,7 +50,9 @@ python manage.py createsuperuser
 ```
 
 6. Load static images
+```bash
 python manage.py collectstatic --noinput
+```
 
 7. Run the development server:
 ```bash
