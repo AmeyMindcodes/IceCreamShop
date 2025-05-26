@@ -49,12 +49,15 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-6. Run the development server:
+6. Load static images
+python manage.py collectstatic --noinput
+
+7. Run the development server:
 ```bash
 python manage.py runserver
 ```
 
-7. Visit http://127.0.0.1:8000/ in your browser to see the website.
+8. Visit http://127.0.0.1:8000/ in your browser to see the website.
 
 ## Deployment
 
